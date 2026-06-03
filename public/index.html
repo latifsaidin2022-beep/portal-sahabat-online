@@ -130,7 +130,8 @@
     </div>
 
     <script>
-        const URL_CLOUD = "https://script.google.com/macros/s/AKfycbxFoIkvCSjEnXMKgo86-rGp8L0eoK03Kjh5MHQjLWcdYBzjBXKIk-NMDKt4cQ6eKL0O/exec";
+        // 🔒 LINK BARU KAKAK SUDAH AKTIF DISINI:
+        const URL_CLOUD = "https://script.google.com/macros/s/AKfycbwQiyw3hGK-tLZpBbCESVqnFXQ2KqnQNUdKaL7f2-mJEiNMk6pnDjMHccW_6MIfia8/exec";
         const USER_BENAR = "admin"; const PASS_BENAR = "nelayan123";
         let dbNelayan = []; let dbSurat = [];
 
@@ -173,7 +174,6 @@
             const dusun = document.getElementById('nelayan-dusun').value.trim(); const kecamatan = document.getElementById('nelayan-kecamatan').value.trim();
             if (!nama || !nik || !kk || !gender || !tlp || !alamat || !dusun || !kecamatan) { alert("Lengkapi semua data!"); return; }
             
-            // 💡 MODE CEPAT NYATA: Beri notifikasi, kosongkan input, dan langsung kembali ke menu utama dalam 1 detik
             alert("Data sedang dikirim ke Cloud Google di latar belakang, Kak!");
             document.getElementById('nelayan-nama').value = ""; document.getElementById('nelayan-nik').value = "";
             document.getElementById('nelayan-kk').value = ""; document.getElementById('nelayan-gender').value = "";
@@ -182,7 +182,6 @@
             bukaDashboard();
 
             var barisData = [nama, nik, kk, gender, tlp, alamat, dusun, kecamatan];
-            // Proses pengiriman berjalan senyap di latar belakang tanpa mengunci layar HP Kakak
             fetch(URL_CLOUD, { method: "POST", body: JSON.stringify({ aksi: "tambah", target: "nelayan", baris: barisData }) });
         }
 
@@ -200,7 +199,6 @@
             const perihal = document.getElementById('surat-perihal').value.trim(); const ket = document.getElementById('surat-ket').value.trim() || "-";
             if (!jenis || !tanggal || !nomor || !asal || !perihal) { alert("Lengkapi semua kolom!"); return; }
             
-            // 💡 MODE CEPAT NYATA: Langsung balik ke menu utama dalam 1 detik
             alert("Data Surat sedang diproses ke Cloud Google, Kak!");
             document.getElementById('surat-jenis').value = ""; document.getElementById('surat-tanggal').value = "";
             document.getElementById('surat-nomor').value = ""; document.getElementById('surat-asal').value = "";
